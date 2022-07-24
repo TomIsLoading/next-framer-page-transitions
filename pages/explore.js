@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsFillTreeFill } from "react-icons/bs";
 
@@ -13,14 +12,7 @@ export default function Explore() {
 
 const NavBar = () => {
   return (
-    <motion.div
-      initial={{ y: 25, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{
-        duration: 0.75,
-      }}
-      className="nav-bar"
-    >
+    <div className="nav-bar">
       <BsFillTreeFill size="50px" color="#1d3319" />
       <div initial="hidden" animate="show">
         <Link href="/">
@@ -36,22 +28,14 @@ const NavBar = () => {
           <a className="back-btn">Book a Tour</a>
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const Hero = () => {
   return (
     <div className="explore-page-hero">
-      <motion.div
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          delay: 0.2,
-          duration: 0.75,
-        }}
-        className="header-content"
-      >
+      <div className="header-content">
         <div>
           <BsFillTreeFill size="35px" color="#1d3319" />
         </div>
@@ -63,22 +47,14 @@ const Hero = () => {
         <Link href="/">
           <a className="back-btn">View Our Parks</a>
         </Link>
-      </motion.div>
+      </div>
       <Mountains />
     </div>
   );
 };
 
 const Mountains = () => (
-  <motion.div
-    initial={{ y: 25, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    transition={{
-      delay: 0.4,
-      duration: 0.75,
-    }}
-    className="mountains"
-  >
+  <div className="mountains">
     <svg
       id="visual"
       viewBox="0 0 900 600"
@@ -123,5 +99,5 @@ const Mountains = () => (
         fill="#265020"
       />
     </svg>
-  </motion.div>
+  </div>
 );
